@@ -1,136 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script>
-      function moveRight(){
+<html >
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="dragndrop_css.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="dragndrop_js.js"></script>
+</head>
 
-        var iframe = document.all ? document.all['subframe'] : document.getElementById('subframe');
-        iframe.style.left = (parseInt(iframe.style.left) + 10) +'px';
-      }
-    </script>
-  </head>
+<body>
+	<!--Draggable DIV:-->
+	<!-- <iframe id='iframe' src="file://localhost/Users/sunminson/Desktop/blah.html"></iframe>
+	<input id='URL'/> -->
+	<div class='fixed_bar'>
+		<div class='fixed_bar_header'>Onboarder</div>
+	</div>
+	<div class='fixed_bar_placeholder'></div>
+	<div class='side_bar'>
+		<div class='side_bar_switch'>></div>
+	</div>
+	<div class='section'>
+		<div class='section_header'>Properties</div>
+	</div>
+	<div class='section'>
+		<div class='section_header'>Templates & Features</div>
+	</div>
+	<!-- <div id="mydiv">
+		Include a header DIV with the same name as the draggable DIV, followed by "header":
+		<div id="mydivheader">Click here to move</div>
+		<p>Move</p>
+		<p>this</p>
+		<p>DIV</p>
+	</div> -->
 
-  <body>
-    <!--iframe src="https://m.naver.com" width="600" height="300"-->
-    <a href="javascript: moveRight(); void 0">move right</a>
-    <iframe id="subframe" name="subframe" src="https://m.naver.com" width ="600px" height = "300px" style="position: absolute; top: 400px; left: 400px;">
-    </iframe>
-    <div class="just-padding">
 
-    <div class="list-group list-group-root well">
-      
-      <a href="#item-1" class="list-group-item" data-toggle="collapse">
-        <i class="glyphicon glyphicon-chevron-right"></i>Item 1
-      </a>
-      <div class="list-group collapse" id="item-1">
-        
-        <a href="#item-1-1" class="list-group-item" data-toggle="collapse">
-          <i class="glyphicon glyphicon-chevron-right"></i>Item 1.1
-        </a>
-        <div class="list-group collapse" id="item-1-1">
-          <a href="#" class="list-group-item">Item 1.1.1</a>
-          <a href="#" class="list-group-item">Item 1.1.2</a>
-          <a href="#" class="list-group-item">Item 1.1.3</a>
-        </div>
-        
-        <a href="#item-1-2" class="list-group-item" data-toggle="collapse">
-          <i class="glyphicon glyphicon-chevron-right"></i>Item 1.2
-        </a>
-        <div class="list-group collapse" id="item-1-2">
-          <a href="#" class="list-group-item">Item 1.2.1</a>
-          <a href="#" class="list-group-item">Item 1.2.2</a>
-          <a href="#" class="list-group-item">Item 1.2.3</a>
-        </div>
-        
-        <a href="#item-1-3" class="list-group-item" data-toggle="collapse">
-          <i class="glyphicon glyphicon-chevron-right"></i>Item 1.3
-        </a>
-        <div class="list-group collapse" id="item-1-3">
-          <a href="#" class="list-group-item">Item 1.3.1</a>
-          <a href="#" class="list-group-item">Item 1.3.2</a>
-          <a href="#" class="list-group-item">Item 1.3.3</a>
-        </div>
-        
-      </div>
-      
-      <a href="#item-2" class="list-group-item" data-toggle="collapse">
-        <i class="glyphicon glyphicon-chevron-right"></i>Item 2
-      </a>
-      <div class="list-group collapse" id="item-2">
-        
-        <a href="#item-2-1" class="list-group-item" data-toggle="collapse">
-          <i class="glyphicon glyphicon-chevron-right"></i>Item 2.1
-        </a>
-        <div class="list-group collapse" id="item-2-1">
-          <a href="#" class="list-group-item">Item 2.1.1</a>
-          <a href="#" class="list-group-item">Item 2.1.2</a>
-          <a href="#" class="list-group-item">Item 2.1.3</a>
-        </div>
-        
-        <a href="#item-2-2" class="list-group-item" data-toggle="collapse">
-          <i class="glyphicon glyphicon-chevron-right"></i>Item 2.2
-        </a>
-        <div class="list-group collapse" id="item-2-2">
-          <a href="#" class="list-group-item">Item 2.2.1</a>
-          <a href="#" class="list-group-item">Item 2.2.2</a>
-          <a href="#" class="list-group-item">Item 2.2.3</a>
-        </div>
-        
-        <a href="#item-2-3" class="list-group-item" data-toggle="collapse">
-          <i class="glyphicon glyphicon-chevron-right"></i>Item 2.3
-        </a>
-        <div class="list-group collapse" id="item-2-3">
-          <a href="#" class="list-group-item">Item 2.3.1</a>
-          <a href="#" class="list-group-item">Item 2.3.2</a>
-          <a href="#" class="list-group-item">Item 2.3.3</a>
-        </div>
-        
-      </div>
-      
-      
-      <a href="#item-3" class="list-group-item" data-toggle="collapse">
-        <i class="glyphicon glyphicon-chevron-right"></i>Item 3
-      </a>
-      <div class="list-group collapse" id="item-3">
-        
-        <a href="#item-3-1" class="list-group-item" data-toggle="collapse">
-          <i class="glyphicon glyphicon-chevron-right"></i>Item 3.1
-        </a>
-        <div class="list-group collapse" id="item-3-1">
-          <a href="#" class="list-group-item">Item 3.1.1</a>
-          <a href="#" class="list-group-item">Item 3.1.2</a>
-          <a href="#" class="list-group-item">Item 3.1.3</a>
-        </div>
-        
-        <a href="#item-3-2" class="list-group-item" data-toggle="collapse">
-          <i class="glyphicon glyphicon-chevron-right"></i>Item 3.2
-        </a>
-        <div class="list-group collapse" id="item-3-2">
-          <a href="#" class="list-group-item">Item 3.2.1</a>
-          <a href="#" class="list-group-item">Item 3.2.2</a>
-          <a href="#" class="list-group-item">Item 3.2.3</a>
-        </div>
-        
-        <a href="#item-3-3" class="list-group-item" data-toggle="collapse">
-          <i class="glyphicon glyphicon-chevron-right"></i>Item 3.3
-        </a>
-        <div class="list-group collapse" id="item-3-3">
-          <a href="#" class="list-group-item">Item 3.3.1</a>
-          <a href="#" class="list-group-item">Item 3.3.2</a>
-          <a href="#" class="list-group-item">Item 3.3.3</a>
-        </div>
-        
-      </div>
-      
-    </div>
-      
-    </div>
 
-  </body>
 
+</body>
 </html>
